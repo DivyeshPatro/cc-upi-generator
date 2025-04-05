@@ -1,0 +1,21 @@
+.main {
+    font-family: 'Segoe UI', sans-serif;
+}
+.small-text {
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.success-msg {
+    color: #1a7f37;
+}
+.error-msg {
+    color: #c71f1f;
+}
+.stTextInput > div > input {
+    font-size: 16px;
+    padding: 10px;
+}
+.stSelectbox > div > div {
+    font-size: 16px;
+}
