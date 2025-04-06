@@ -18,7 +18,7 @@ st.markdown("""
 <div style='padding: 15px; border: 1px solid #ffc107; border-radius: 5px; margin-bottom: 20px; font-size: 0.9rem;'>
     ⚠️ <b>Disclaimer:</b> The generated UPI IDs are based on predefined logic and may not always be valid. Please <b>verify</b> the UPI ID before making any transactions.<br><br>
     🔐 <b>Privacy First:</b> The credit card numbers and phone numbers entered here are <b>not stored</b> anywhere. Everything runs locally during your session.<br><br>
-    💡 <b>Open Source:</b> This tool is <b>completely open source</b>. You can find the project on <a href="https://github.com/DivyeshPatro/creditcard-upi-generator.git" target="_blank" style="text-decoration: underline; color: #0c5460;">GitHub</a>. Contributions are welcome! 🚀
+    💡 <b>Open Source:</b> This tool is <b>completely open source</b>. You can find the project on <a href="https://github.com/DivyeshPatro/cc-upi-generator.git" target="_blank" style="text-decoration: underline; color: #0c5460;">GitHub</a>. Contributions are welcome! 🚀
 </div>
 """, unsafe_allow_html=True)
 
@@ -69,7 +69,30 @@ if st.button("🚀 Generate UPI ID"):
         upi_id = generate_upi_id(phone, card_input, bank)
         if upi_id:
             st.markdown(f"<div class='small-text success-msg'>✅ UPI ID generated!</div>", unsafe_allow_html=True)
-            st.code(upi_id)
-            show_qr_popup(upi_id)
+            upi_uri = (f"upi://pay?pa={upi_id}&pn={bank}&cu=INR")
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.code(upi_id)
+            with col2:
+                st.markdown(
+                    f"""
+                    <a href="{upi_uri}" target="_blank">
+                        <button style="
+                            padding: 4px 14px;
+                            border: none;
+                            border-radius: 4px;
+                            background-color: #ad8748;
+                            color: white;
+                            cursor: pointer;
+                        ">💸 Click to Pay</button>
+                    </a>
+                    """,
+                    unsafe_allow_html=True
+                )
+                st.markdown(
+                    "<div style='font-size: 12px; color: grey; margin-top: 4px;'>⚠️ Works only on smartphone with UPI apps installed.</div>",
+                    unsafe_allow_html=True
+                )
+            show_qr_popup(upi_id,bank)
     else:
         st.markdown(f"<div class='small-text error-msg'>❌ Invalid inputs. Please correct above or fill all the required fields.</div>", unsafe_allow_html=True)

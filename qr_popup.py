@@ -5,8 +5,8 @@ from io import BytesIO
 from base64 import b64encode
 import streamlit.components.v1 as components
 
-def show_qr_popup(upi_id):
-    qr_img = qrcode.make(f"upi://pay?pa={upi_id}&pn=Test User")
+def show_qr_popup(upi_id,bank):
+    qr_img = qrcode.make(f"upi://pay?pa={upi_id}&pn={bank}&cu=INR")
     buffer = BytesIO()
     qr_img.save(buffer, format="PNG")
     qr_base64 = b64encode(buffer.getvalue()).decode()
