@@ -69,6 +69,38 @@ if st.button("🚀 Generate UPI ID"):
         upi_id = generate_upi_id(phone, card_input, bank)
         if upi_id:
             st.markdown(f"<div class='small-text success-msg'>✅ UPI ID generated!</div>", unsafe_allow_html=True)
+            # 👉 SBI-specific alert
+            if bank == "SBI":
+                st.markdown("""
+                <div class='small-text' style='color:#c27c0e; background-color:#fff3cd; border:1px solid #ffeeba; padding:10px; border-radius:5px; margin-top:10px;'>
+                ⚠️ <b>Note for SBI Users:</b><br>
+                You need to enable <b>SBI Pay (UPI)</b> either through <b>YONO SBI</b> or <b>BHIM SBI PAY</b>.<br>
+                Once enabled, your generated UPI ID will only work with <b>YONO</b> or <b>BHIM SBI PAY</b>.<br>
+                <b>SBI restricts UPI ID resolution</b> to the app it was created with.
+                <span style="position:relative; cursor:help;">
+                    Reference: 
+                    <a href="https://www.sbicard.com/en/faq/upi.page" target="_blank" style="text-decoration:underline; color:#0c5460;">
+                        SBI card website  ( Q-15 )
+                    </a>
+                    <span style="visibility:hidden; width:200px; background-color:#333; color:#fff; text-align:left; border-radius:5px; padding:5px; position:absolute; z-index:1; bottom:120%; left:0; opacity:0; transition:opacity 0.3s;">
+                        Opens the official SBI UPI FAQ page
+                    </span>
+                </span>
+                <script>
+                    const tooltip = document.querySelectorAll("span[style*='position:relative']");
+                    tooltip.forEach(el => {
+                    el.addEventListener("mouseover", () => {
+                        el.children[1].style.visibility = "visible";
+                        el.children[1].style.opacity = "1";
+                    });
+                    el.addEventListener("mouseout", () => {
+                        el.children[1].style.visibility = "hidden";
+                        el.children[1].style.opacity = "0";
+                    });
+                    });
+                </script>
+                </div>
+                """, unsafe_allow_html=True)
             upi_uri = (f"upi://pay?pa={upi_id}&pn={bank}&cu=INR")
             col1, col2 = st.columns([3, 1])
             with col1:
