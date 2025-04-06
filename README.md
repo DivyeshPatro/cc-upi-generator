@@ -88,8 +88,8 @@ Here’s a sneak peek of the app in action:
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/DivyeshPatro/credit-card-upi-generator.git
-cd credit-card-upi-generator
+git clone https://github.com/DivyeshPatro/cc-upi-generator.git
+cd cc-upi-generator
 pip install -r requirements.txt
 streamlit run app.py
 ```

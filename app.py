@@ -23,7 +23,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Inputs
-phone = st.text_input("📱 Enter your 10-digit mobile number", max_chars=10, placeholder= "Mobile Number here")
+phone = st.text_input("📱 Enter your 10-digit mobile number", max_chars=10, placeholder= "Mobile Number goes here")
 valid_phone =False
 valid_card = False
 if phone and len(phone) == 10 and phone.isdigit():
@@ -72,4 +72,4 @@ if st.button("🚀 Generate UPI ID"):
             st.code(upi_id)
             show_qr_popup(upi_id)
     else:
-        st.markdown(f"<div class='small-text error-msg'>❌ Invalid inputs. Please correct above.</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='small-text error-msg'>❌ Invalid inputs. Please correct above or fill all the required fields.</div>", unsafe_allow_html=True)
