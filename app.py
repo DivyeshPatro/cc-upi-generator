@@ -13,53 +13,12 @@ with open("styles.css") as f:
 
 # UI Start
 st.title("🔗 Credit Card UPI Generator")
-st.markdown("<h3 style='margin-top: -15px; color: #a78bfa; font-size: 1.2rem;'>Skip BBPS - Instant Card Payments via UPI</h3>", unsafe_allow_html=True)
-st.markdown("""
-    <div style='
-        padding: 15px;
-        border: 2px solid rgb(167, 139, 250);
-        border-radius: 8px;
-        background-color: rgb(30, 27, 46);
-        color: rgb(224, 224, 224);
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    '>
-        💳 <b>Tired of BBPS delays for CC payments?</b><br>
-        <br>
-        Generate instant UPI IDs for your credit cards — no OTPs, no logins, no drama.<br>
-        Built for users who want fast CC top-ups & instant payments — skip the BBPS bottleneck. ⚡💸<br>
-        <b>✨ Features:</b><br>
-        🔹 Generate UPI ID using Card + Registered Mobile<br>
-        🔹 Works with major Indian banks<br>
-        🔹 Instant UPI ID generation<br>
-        🔹 "Click to Pay" redirects to UPI app<br>
-        🔹 Auto QR for quick scan & pay
-        <br>
-        📘 For more info, check the 
-        <a href="https://github.com/DivyeshPatro/cc-upi-generator/blob/main/README.md" 
-           target="_blank" 
-           style="text-decoration: underline; color: rgb(191, 94, 94);">
-            README file
-        </a>
-    </div>
-""", unsafe_allow_html=True)
-
 
 st.markdown("""
-<div style='
-    padding: 15px; 
-    border: 2px solid #ffc107; 
-    border-radius: 5px; 
-    margin-top: 10px; 
-    margin-bottom: 20px; 
-    font-size: 0.9rem;
-    background-color: rgb(37 33 19);
-    color: rgb(240, 235, 210);
-'>
+<div style='padding: 15px; border: 1px solid #ffc107; border-radius: 5px; margin-bottom: 20px; font-size: 0.9rem;'>
     ⚠️ <b>Disclaimer:</b> The generated UPI IDs are based on predefined logic and may not always be valid. Please <b>verify</b> the UPI ID before making any transactions.<br><br>
     🔐 <b>Privacy First:</b> The credit card numbers and phone numbers entered here are <b>not stored</b> anywhere. Everything runs locally during your session.<br><br>
-    💡 <b>Open Source:</b> This tool is <b>completely open source</b>. You can find the project on <a href="https://github.com/DivyeshPatro/cc-upi-generator.git" target="_blank" style="text-decoration: underline; color: rgb(96, 171, 183);">GitHub</a>. Contributions are welcome! 🚀
+    💡 <b>Open Source:</b> This tool is <b>completely open source</b>. You can find the project on <a href="https://github.com/DivyeshPatro/cc-upi-generator.git" target="_blank" style="text-decoration: underline; color: #0c5460;">GitHub</a>. Contributions are welcome! 🚀
 </div>
 """, unsafe_allow_html=True)
 
