@@ -30,7 +30,7 @@ def get_card_network(card_number):
 
 def generate_upi_id(phone, card_input, bank):
     if bank == "ICICI":
-        return f"ccpay.{card_input}@icici"
+        return f"ccpay.{phone}{card_input[-4:]}@icici"
     elif bank == "SBI":
         return f"sbicard.{card_input}@sbi"
     elif bank == "AMEX" and len(card_input) == 15:
