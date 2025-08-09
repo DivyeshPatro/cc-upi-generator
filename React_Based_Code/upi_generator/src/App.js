@@ -208,9 +208,9 @@ export default function App() {
 
         {/* Disclaimer Box */}
         <div className="disclaimer">
-          <p>⚠️ <strong>Disclaimer:</strong> The generated UPI IDs are based on predefined logic and may not always be valid. Please <strong>verify</strong> the UPI ID before making any transactions.</p>
-          <p>🔐 <strong>Privacy First:</strong> Saved cards are stored locally in your browser storage and never sent to any server.</p>
-          <p>💡 <strong>Open Source:</strong> See the project on <a href="https://github.com/DivyeshPatro/creditcard-upi-generator.git" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+          <p>⚠️ <strong>Disclaimer:</strong> UPI IDs generated in this tool are based on static logic and may not be valid for real-world transactions. Always <strong>double-check</strong> the UPI ID before sending any payments.</p>
+          <p>🔐 <strong>Privacy Notice:</strong> All saved card details are stored only in your browser’s <strong>session storage</strong>. They are <strong>not uploaded</strong> or shared with any external server or third party.</p>
+          <p>💡 <strong>Open Source:</strong> This tool is completely open source. You can find the project on <a href="https://github.com/DivyeshPatro/cc-upi-generator" target="_blank" rel="noopener noreferrer">GitHub</a>. Contributions are welcome! 🚀.</p>
         </div>
 
         {/* Data Input Section */}
