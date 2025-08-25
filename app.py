@@ -166,6 +166,7 @@ if st.button("🚀 Generate UPI ID"):
                     "<div style='font-size: 12px; color: grey; margin-top: 4px;'>⚠️ Works only on smartphone with UPI apps installed.</div>",
                     unsafe_allow_html=True
                 )
+            st.button("Click to save card")
             show_qr_popup(upi_id,bank)
     else:
         st.markdown(f"<div class='small-text error-msg'>❌ Invalid inputs. Please correct above or fill all the required fields.</div>", unsafe_allow_html=True)
