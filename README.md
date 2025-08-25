@@ -2,12 +2,39 @@
 
 Simplify your credit card bill payments with our smart UPI ID generator. Built using **Streamlit**.
 
-## 🚀 Access the Live Tool  
-It is hosted on **Streamlit Cloud** and available here -> [Credit Card UPI Generator](https://cc-upi-generator.streamlit.app). 
+---
 
+## 🚀 Access the Live Tools
+
+🔹 **Streamlit Version**  
+Hosted on Streamlit Cloud – [Credit Card UPI Generator](https://cc-upi-generator.streamlit.app)
+
+🔹 **React Version (Client-Side)**  
+UPI ID gets cached on the client side (not stored on any server) – [React UPI Generator](https://divyeshpatro.github.io/cc-upi-generator/)
+
+---
+
+## 🛠️ Tech Stack
+
+| Version | Tech Used |
+|--------|-----------|
+| 🟢 Streamlit | Python, Streamlit, Pandas |
+| 🔵 React | React.js, Javascript, CSS ,HTML |
+
+---
+
+## 📌 Features
+
+- 🔐 No data stored – everything runs locally
+- ⚡ Fast generation of UPI IDs
+- 🧠 Smart VPA patterns
+- 🌗 React version caches UPI locally
+- ✅ Built with privacy and simplicity in mind
+
+---
 ## 🧭 Overview  
 💡 Ever tried paying your **credit card bill** with just a UPI ID?  
-
+     
 Well, now you can. Most Indian banks support this — no app logins, no OTPs — just pure UPI magic.  
 
 With this tool, you can:  
